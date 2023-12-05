@@ -1,7 +1,7 @@
 const fs = require('fs'); 
 
-
-const async multiplicacion = (tabla) => {
+ 
+const  multiplicacion = async(tabla) => {
   console.clear();
   console.log("===============================");
   console.log(`============  ${tabla} ================`);
@@ -15,10 +15,12 @@ const async multiplicacion = (tabla) => {
     salida = salida + ` ${tabla} x ${index}` + ` = ${tabla * index} \n`;
   }
 
+  // file System para crear un txt
 fs.writeFileSync(`tabla-${tabla}.txt`,salida);
 console.log("Archivo Creado!!!");
 };
 
+// exportaciones de las funciones
 module.exports = {
 multiplicar: multiplicacion
 }
