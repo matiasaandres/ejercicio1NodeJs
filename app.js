@@ -1,24 +1,27 @@
+const fs = require('fs'); 
 // tabla del 5
 
-multi = (tabla)=>{
+multi = (tabla) => {
+  console.clear();
+  console.log("===============================");
+  console.log(`============  ${tabla} ================`);
+  console.log("===============================");
+  console.log("");
 
-    console.clear();
-    console.log("===============================");
-    console.log(`============  ${tabla } ================`);
-    console.log("===============================");
-    console.log("");
+  let number = 12;
+  let salida = "";
 
-    let number = 12;
+  for (let index = 1; index <= number; index++) {
+    salida = salida + ` ${tabla} x ${index}` + ` = ${tabla * index} \n`;
+  }
 
-    for (let index = 1; index <= number; index++) {
-        
+fs.writeFile(`tabla-${tabla}.txt`,salida, (err)=>{
 
-        console.log(` ${tabla} x ${index}` + ` = ${tabla*index}` );
+    if(err){
+        throw err;
     }
-    console.log(""); 
-    console.log("===============================");
+    console.log('Archivo Creado');
+})
+};
 
-}
-
-multi(355);
-
+multi(13);
