@@ -32,5 +32,5 @@ try {
 
 // exportaciones de las funciones
 module.exports = {
-multiplicar: multiplicacion
+multiplicar : multiplicacion
 }
