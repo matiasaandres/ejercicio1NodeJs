@@ -1,8 +1,9 @@
 const fs = require('fs'); 
 
 
-try {
+
     const  multiplicacion = async(tabla) => {
+      try {
         console.clear();
         console.log("===============================");
         console.log(`============  ${tabla} ================`);
@@ -21,13 +22,13 @@ try {
 
       return `tabla-${tabla}`;
 
-    }
+    
 
 } catch (err) {
     throw err;
 }
 
- 
+}
 
 
 // exportaciones de las funciones
